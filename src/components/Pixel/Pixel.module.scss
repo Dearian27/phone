@@ -1,0 +1,12 @@
+.pixel {
+  // width: 30px;
+  // height: 30px;
+  background: #ECECEC;
+  border-radius: 5px;
+}
+
+:global {
+  .active {
+    background: #535353 !important;
+  }
+}

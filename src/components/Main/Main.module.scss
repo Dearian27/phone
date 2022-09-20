@@ -1,0 +1,55 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+
+
+  .title {
+    font-size: 90px;
+
+    font-family: 'Montserrat';
+    align-self: center;
+
+  }
+
+  .sandbox {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .outputWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .output {
+      height: 70px;
+      width: 440px;
+      font-size: 50px;
+      border: 1px solid #BABABA;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      padding: 0 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    div {
+      font-family: 'Montserrat';
+      font-weight: 800;
+      font-size: 40px;
+      padding-bottom: 5px;
+    }
+
+    button {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}
