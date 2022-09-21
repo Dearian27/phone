@@ -13,26 +13,26 @@ const example = [
   0, 0, 0, 0,
 ]
 
-// const example1 = [
-//   0, 0, 1, 0,
-//   0, 1, 1, 0,
-//   0, 0, 1, 0,
-//   0, 0, 1, 0,
-//   0, 0, 1, 0,
-//   0, 0, 1, 0,
-//   0, 0, 1, 0,
-// ]
+const example1 = [
+  0, 0, 1, 0,
+  0, 1, 1, 0,
+  0, 0, 1, 0,
+  0, 0, 1, 0,
+  0, 0, 1, 0,
+  0, 0, 1, 0,
+  0, 0, 1, 0,
+]
 
 
-const Card = ({id}) => {
+const Card = ({id, setChange, change}) => {
 
-  const activePixels = useContext(PixelsContext);
+  const {activePixels} = useContext(PixelsContext);
 
   return(
     <div className={styles.card}>
       {
         example.map((el, index) => {
-          return <Pixel key={index} id={index} parentId={id} state={el === 1 ? true : false} />
+          return <Pixel setChange={setChange} change={change} key={index} id={index} parentId={id} state={el === 1 ? true : false} />
         })
       }
     </div>

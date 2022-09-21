@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import './App.css';
 import Info from './components/Info';
 import Main from './components/Main';
@@ -16,16 +16,21 @@ const activePixels = {
   9: []
 }
 
-export const PixelsContext = createContext(activePixels)
+export const PixelsContext = createContext({
+  activePixels,
+})
 
 function App() {
 
+  const [change, setChange] = useState(false);
   
 
   return (
     <section className="wrapper">
-      <PixelsContext.Provider value={activePixels}>
-        <Main />
+      <PixelsContext.Provider value={{
+        activePixels,
+      }}>
+        <Main change={change} setChange={setChange}/>
         <Info />
       </PixelsContext.Provider>
     </section>
