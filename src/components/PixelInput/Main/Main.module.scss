@@ -1,0 +1,144 @@
+.main {
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+
+
+  .title {
+    font-size: 90px;
+
+    font-family: 'Montserrat';
+    align-self: center;
+
+  }
+
+  .sandbox {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    div {
+      font-family: 'Montserrat';
+      font-weight: 800;
+      font-size: 40px;
+      padding-bottom: 5px;
+    }
+
+    .outputWrapper {
+      position: relative;
+      height: 70px;
+
+      .output {
+        height: 70px;
+        width: 440px;
+        font-size: 50px;
+        border: 1px solid #BABABA;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 0 70px 0 10px;
+        text-align: center;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        cursor: pointer;
+        height: 72px;
+        width: 72px;
+        background-color: #D9D9D9;
+        border: none;
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: background 1s ease;
+
+        &:focus {
+          outline: none;
+        }
+
+        &.active {
+          // background-color: #222222;
+          background-color: lawngreen;
+          transition: background 1s ease;
+        }
+
+        .copy {
+          width: 50%;
+          height: 50%;
+        }
+      }
+
+
+    }
+
+    .link {
+      font-family: 'Montserrat';
+      margin-top: 20px;
+      color: rgb(34, 112, 255);
+      text-decoration: underline;
+      font-size: 35px;
+    }
+
+  }
+
+  .dialogModal {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    font-family: 'Montserrat';
+    padding: 10px 120px;
+    font-size: 30px;
+    color: white;
+    background-color: #222222;
+    border-radius: 50px;
+
+    &.active {
+      display: block;
+      animation: appear 0.5s ease-in-out;
+    }
+
+    &.dissappear {
+      transition: 0.5s;
+      opacity: 0;
+      display: block;
+      animation: dissappear 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0)
+    }
+  }
+
+  @keyframes dissappear {
+    0% {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+}

@@ -1,38 +1,22 @@
-import { createContext, useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Info from './components/Info';
-import Main from './components/Main';
+import CounterInput from './pages/CounterInput';
+import PixelInput from './pages/PixelInput';
+import RandomInput from './pages/RandomInput';
 
-const activePixels = {
-  0: [],
-  1: [],
-  2: [],
-  3: [],
-  4: [],
-  5: [],
-  6: [],
-  7: [],
-  8: [],
-  9: []
-}
-
-export const PixelsContext = createContext({
-  activePixels,
-})
 
 function App() {
 
-  const [change, setChange] = useState(false);
+
   
 
   return (
-    <section className="wrapper">
-      <PixelsContext.Provider value={{
-        activePixels,
-      }}>
-        <Main change={change} setChange={setChange}/>
-        <Info />
-      </PixelsContext.Provider>
+    <section className="wrapper">  
+      <Routes>
+        <Route path='/' element={<PixelInput/>}/>
+        <Route path='/counterInput' element={<CounterInput/>}/>
+        <Route path='/randomInput' element={<RandomInput/>} />
+      </Routes>
     </section>
   );
 }

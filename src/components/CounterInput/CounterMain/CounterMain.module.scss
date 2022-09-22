@@ -1,0 +1,31 @@
+.container {
+  overflow-y: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+
+
+  .title {
+    font-size: 90px;
+
+    font-family: 'Montserrat';
+    align-self: center;
+
+  }
+
+  .numbersWrapper {
+    display: flex;
+    gap: 15px;
+  }
+
+  .link {
+    font-family: 'Montserrat';
+    margin-top: 20px;
+    color: rgb(34, 112, 255);
+    text-decoration: underline;
+    font-size: 35px;
+  }
+}

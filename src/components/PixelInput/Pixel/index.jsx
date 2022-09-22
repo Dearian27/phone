@@ -1,5 +1,5 @@
 import {useContext, useEffect,  useState} from 'react'
-import { PixelsContext } from '../../App'
+import { PixelsContext } from '../../../pages/PixelInput'
 import styles from './Pixel.module.scss'
 
 const Pixel = ({state, id, parentId, setChange, change}) => {
