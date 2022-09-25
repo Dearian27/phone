@@ -1,0 +1,7 @@
+.pixelInput__wrapper {
+  overflow-y: hidden;
+  display: grid;
+  grid-template-columns: calc(100vw - 170px) 170px;
+  grid-template-rows: 100vh;
+  height: 100%;
+}

@@ -11,13 +11,13 @@ function App() {
   
 
   return (
-    <section className="wrapper">  
+  <>
       <Routes>
         <Route path='/' element={<PixelInput/>}/>
         <Route path='/counterInput' element={<CounterInput/>}/>
         <Route path='/randomInput' element={<RandomInput/>} />
       </Routes>
-    </section>
+  </>
   );
 }
 

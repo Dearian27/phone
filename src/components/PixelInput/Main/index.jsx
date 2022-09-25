@@ -19,7 +19,7 @@ const Main = ({change, setChange}) => {
   const example4 = "034781112131415192327"
   const example5 = "0123481213141920232526"
   const example6 = "12478121314161920232526"
-  const example7 = "012371114182125"
+  const example7 = "0123471114182125"
   const example8 = "12478111314161920232526"
   const example9 = "12478111314151920232526"
   const example0 = "12478111215161920232526"
