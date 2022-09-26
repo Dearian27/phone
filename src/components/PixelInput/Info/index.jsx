@@ -19,11 +19,9 @@ const examples = [
 const Info = () => {
   return(
     <aside className={styles.info}>
-        {
-        examples.map((url, index) => {
+        {examples.map((url, index) => {
           return <ExampleCard key={index} imgUrl={url} />
-        })
-        }
+        })}
     </aside>
   )
 }
